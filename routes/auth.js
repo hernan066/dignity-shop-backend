@@ -96,7 +96,7 @@ const crearUsuario = async (req, res = express.response) => {
     if (user) {
       return res.status(400).json({
         ok: false,
-        msg: "El usuario ya existe",
+        msg: "El email ya esta en uso",
       });
     }
 
