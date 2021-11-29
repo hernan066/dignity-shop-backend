@@ -163,6 +163,7 @@ const login = async(req, res = express.response) => {
       ok: true,
       uid: user.id,
       username: user.username,
+      isAdmin: user.isAdmin,
       token
     });
 
@@ -198,7 +199,7 @@ const renewToken = async (req, res = express.response) => {
     ok: true,
     uid,
     username,
-   
+    isAdmin,
     token
   });
 };
